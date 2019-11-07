@@ -8,6 +8,7 @@ jobs:
     runs-on: macOS-latest
     steps:
     - run: csrutil disable
+      continue-on-error: true
     - uses: actions/checkout@v1
     - uses: cachix/install-nix-action@v3
     - name: Setup repo
