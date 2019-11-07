@@ -9,7 +9,7 @@ jobs:
     steps:
     - run: csrutil disable
       continue-on-error: true
-    - run: mkdir -m 0755 /nix && chown runner /nix
+    - run: sudo mkdir -m 0755 /nix && chown runner /nix
       continue-on-error: true
     - uses: actions/checkout@v1
     - uses: cachix/install-nix-action@v3
